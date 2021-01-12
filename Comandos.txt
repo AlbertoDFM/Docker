@@ -1,5 +1,9 @@
+================Gestión de Docker images==================
 
---Gestión de contenedores--
+Para descargar una imagen de Docker desde DockerHub (ejemplo: busybox)
+	$docker image pull busybox
+
+=================Gestión de contenedores==================
 
 Para especificar una imagen que usaremos de base al momento de lanzar el contenedor :
 	$ docker run [opciones] [imagen] [comandos] [argumentos]
