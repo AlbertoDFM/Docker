@@ -1,4 +1,3 @@
-DOCKER
 
 --Gestión de contenedores--
 
@@ -11,5 +10,15 @@ Con la opción - d , el contenedor se ejecuta en modo detached/background
 Podemos ejecutar y usar una terminal en el contenedor
 	$ docker run -t -i ubuntu_14.04 /bin/bash
 
-Con la opción -t 	se asigna una tty ( tty es un comando de Unix que muestra el 				nombre de fichero de la terminal de la entrada estándar).
+Con la opción -t 	se asigna una tty ( tty es un comando de Unix que muestra el nombre de fichero de la terminal de la entrada estándar).
 Con la opción -i 		nos comunicamos con el contenedor de modo interactivo
+
+
+
+docker container ps
+	-muestra sólo los contenedores que se están ejecutando
+	-a 	muestra todos los contenedores
+	-l	sólo el ultimo contenedor
+	-q	sólo muestra las IDs
+	-s	muestra el tamaño
+	-n	lista los n últimos contenedores
