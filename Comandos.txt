@@ -1,0 +1,15 @@
+DOCKER
+
+--Gestión de contenedores--
+
+Para especificar una imagen que usaremos de base al momento de lanzar el contenedor :
+	$ docker run [opciones] [imagen] [comandos] [argumentos]
+
+Con la opción - d , el contenedor se ejecuta en modo detached/background 
+	$ docker container run -d --name web1 nginx
+
+Podemos ejecutar y usar una terminal en el contenedor
+	$ docker run -t -i ubuntu_14.04 /bin/bash
+
+Con la opción -t 	se asigna una tty ( tty es un comando de Unix que muestra el 				nombre de fichero de la terminal de la entrada estándar).
+Con la opción -i 		nos comunicamos con el contenedor de modo interactivo
