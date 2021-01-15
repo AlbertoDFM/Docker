@@ -2,11 +2,15 @@
 
 Para descargar una imagen de Docker desde DockerHub (ejemplo: busybox)
 
-	$docker image pull busybox
+	$docker image pull imagen
 
 Para visualizar las imagenes en el host
 
 	$docker image ls
+
+Para borrar todas las imagenes 
+	
+	$docker image prune -a
 
 =================Gestión de contenedores==================
 
@@ -16,10 +20,11 @@ Ejecutamos un nuevo container de la imagen que queremos
 
 Podemos ejecutar un comando dentro del contenedor
 
-	$ docker container run busybox /bin/echo "Hello"
+	$ docker container run imagen /bin/echo "Hello"
 
 Con la opción - d , el contenedor se ejecuta en modo detached/background 
 Con la opción --name, le asignamos un nombre al contenedor
+Con la opción --restart=always, el contenedor es automaticamente reiniciado siempre
 
 	$ docker container run -d --name web1 nginx
 
@@ -51,13 +56,15 @@ docker container exec -> Run command within a running container
 
 docker container attach -> attach a terminal to STD (IN|OUT|ERR) of container
 
-docher container logs	-> display accumulated logs from STD (OUT|ERR)
+docher container logs id/nombre	-> display accumulated logs from STD (OUT|ERR)
 
-docker container stop	-> Stop Container 
+docker container stop id/nombre	-> Stop Container 
 
-docker container kill	-> Kill Container 
+docker container kill id/nombre	-> Kill Container 
 
-docker container start	-> Start a previously defined container
+docker container start id/nombre -> Start a previously defined container
+
+docker container inspect id/nombre -> Display detailed information on one or more containers
 
 docker container rm	-> Remove container
 
@@ -70,3 +77,5 @@ docker container cp	CONTAINER:SRC_PATH DEST_PATH|- 		(COPY FILES OUT)
 docker container inspect CONTAINER
 
 docker container update property CONTAINER
+
+docker container prune -> Elimina todos los contenedores
